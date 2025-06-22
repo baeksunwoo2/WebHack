@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 & 텍스트 카운터</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="loginSection">
+            <h2>로그인</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="loginUsername">사용자 이름:</label>
+                    <input type="text" id="loginUsername" name="username" required> <!-- required로 필수 입력값 지정 -->
+                </div>
+                <div class="input-group">
+                    <label for="loginPassword">비밀번호:</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                </div>
+                <button type="submit">로그인</button>
+                <p id="loginMessage" class="message"></p>
+            </form>
+
+            <hr>
+
+            <h2>회원가입</h2>
+            <form id="signupForm">
+                <div class="input-group">
+                    <label for="signupUsername">아이디:</label>
+                    <input type="text" id="signupUsername" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="signupPassword">비밀번호:</label>
+                    <input type="password" id="signupPassword" name="password" required>
+                </div>
+                <button type="submit">회원가입</button>
+                <p id="signupMessage" class="message"></p>
+            </form>
+
+            <hr>
+
+            <h2>회원 탈퇴</h2>
+            <form id="deleteForm">
+                <div class="input-group">
+                    <label for="deleteUsername">탈퇴할 아이디:</label>
+                    <input type="text" id="deleteUsername" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="deletePassword">비밀번호:</label>
+                    <input type="password" id="deletePassword" name="password" required>
+                </div>
+                <button type="submit">회원 탈퇴</button>
+                <p id="deleteMessage" class="message"></p>
+            </form>
+        </div>
+
+        <div id="textCounterSection" style="display: none;">
+            <h2>텍스트 카운터</h2>
+            <textarea id="textArea" placeholder="여기에 텍스트를 입력하세요..." rows="10"></textarea>
+            <div class="counts">
+                <p>글자 수: <span id="charCount">0</span></p>
+                <p>공백 포함 글자 수: <span id="charCountWithSpace">0</span></p>
+                <p>단어 수: <span id="wordCount">0</span></p>
+                <p>줄 수: <span id="lineCount">0</span></p>
+                <p>바이트 수 (UTF-8): <span id="byteCountUtf8">0</span></p>
+                <p>바이트 수 (EUC-KR): <span id="byteCountEucKr">0</span></p>
+            </div>
+            <button id="logoutButton">로그아웃</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
