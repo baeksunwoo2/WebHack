@@ -6,7 +6,7 @@ Backend 폴더에서 실행 후 HTML 구동
 
  pip install -r requirements.txt
  
- .venv\Scripts\activate
+ venv\Scripts\activate
  
  pyhon app.py
  
@@ -15,6 +15,6 @@ Backend 폴더에서 실행 후 HTML 구동
 
  pip install -r requirements.txt
 
- source .venv/bin/activate
+ source venv/bin/activate
 
  python app.py
